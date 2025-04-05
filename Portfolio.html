@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youssef Ibrahim Hosni - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #fff;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            background-image: linear-gradient(to bottom, #222, #1a1a1a);
+        }
+        header h1 {
+            margin: 0 0 20px 0;
+            font-size: 3em;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        header p {
+            font-size: 1.2em;
+            font-weight: 500;
+            margin-bottom: 0;
+            color: #eee;
+        }
+        .section {
+            margin-bottom: 60px;
+        }
+        .section h2 {
+            font-size: 2.5em;
+            color: #ff6600;
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 2px solid #ff6600;
+            padding-bottom: 15px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+        .card {
+            background-color: #222;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+        .card h3 {
+            font-size: 2em;
+            color: #ff6600;
+            margin-bottom: 20px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+        .card p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            color: #eee;
+            line-height: 1.8;
+        }
+        .skills-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .skills-section ul li {
+            background-color: #ff6600;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 30px;
+            margin: 10px;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .skills-section ul li:hover {
+            background-color: #cc5200;
+            transform: scale(1.05);
+        }
+        .experience-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .experience-section ul li {
+            margin-bottom: 30px;
+            padding-left: 30px;
+            position: relative;
+        }
+        .experience-section ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 15px;
+            width: 12px;
+            height: 12px;
+            background-color: #ff6600;
+            border-radius: 50%;
+        }
+        .experience-section h4 {
+            font-size: 1.5em;
+            color: #ff6600;
+            margin-bottom: 10px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+        .experience-section p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            color: #eee;
+            line-height: 1.8;
+        }
+        .education-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .education-section ul li {
+            margin-bottom: 30px;
+            padding-left: 30px;
+            position: relative;
+        }
+        .education-section ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 15px;
+            width: 12px;
+            height: 12px;
+            background-color: #ff6600;
+            border-radius: 50%;
+        }
+        .education-section h4 {
+            font-size: 1.5em;
+            color: #ff6600;
+            margin-bottom: 10px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+        .education-section p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            color: #eee;
+            line-height: 1.8;
+        }
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 60px;
+            background-image: linear-gradient(to bottom, #1a1a1a, #222);
+        }
+        footer p {
+            font-size: 1em;
+            margin-bottom: 0;
+            color: #ddd;
+        }
+        .btn-primary {
+            background-color: #ff6600;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+            margin-top: 25px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .btn-primary:hover {
+            background-color: #cc5200;
+            transform: scale(1.05);
+        }
+        #contact .card p{
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            header h1 {
+                font-size: 2.5em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .section h2 {
+                font-size: 2em;
+            }
+            .card {
+                padding: 30px;
+            }
+            .skills-section ul li {
+                font-size: 1em;
+                padding: 12px 20px;
+            }
+             .card h3{
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .skills-section ul li {
+                font-size: 0.9em;
+                padding: 10px 15px;
+            }
+            .card h3{
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Youssef Ibrahim Hosni</h1>
+            <p>Middleware Integration & Automation Engineer</p>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section id="about" class="section">
+                <h2>About Me</h2>
+                <div class="card">
+                    <p>
+                        Enthusiastic about middleware integration and automation, I specialize in designing API-driven solutions that streamline enterprise workflows. With expertise in IBM App Connect, .NET, and SQL, I develop scalable and efficient system integrations that minimize operational bottlenecks and improve overall performance. My background in IT support and banking operations allows me to bridge the gap between technical and business needs, ensuring secure, high-performance middleware solutions. Committed to continuous learning and innovation, I drive business efficiency and digital transformation through advanced integration solutions.
+                    </p>
+                </div>
+            </section>
+            <section id="skills" class="section skills-section">
+                <h2>Skills</h2>
+                <div class="card">
+                    <ul>
+                        <li>Middleware & Integration: IBM App Connect, Web Methods Toolkit</li>
+                        <li>API Development & Testing: C#, .NET, RESTful APIs, Postman</li>
+                        <li>Database Management: SQL Server, MySQL</li>
+                        <li>Version Control & Collaboration: Git, SVN</li>
+                        <li>Front-End Development: HTML, CSS, JavaScript</li>
+                        <li>Effective communication & decision-making abilities</li>
+                        <li>Effective presentation & public speaking skills</li>
+                        <li>Adaptability in dynamic environments</li>
+                        <li>Team collaboration & leadership</li>
+                        <li>Arabic: Native</li>
+                        <li>English: Very Good (Speaking & Writing)</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="experience" class="section experience-section">
+                <h2>Work Experience</h2>
+                <div class="card">
+                    <ul>
+                        <li>
+                            <h4>Middleware Integration & Automation Engineer</h4>
+                            <p>National Bank of Kuwait – Egypt (Aug 2023 – Present)</p>
+                            <p>
+                                Designed and implemented middleware solutions for seamless system integration using IBM App Connect and Software AG’s Web Methods Toolkit. Developed and managed APIs for efficient data exchange, utilizing Postman for testing and documentation. Monitored middleware performance, ensuring reliability and minimizing downtime. Created automation frameworks to streamline integration processes and reduce manual tasks. Provided support for T24 Core Banking, managing user accounts, roles, and access through the CA ticketing system. Implemented IT security measures, including firewalls, and access controls. Participated in Avamar backup system implementation, print server deployment, and administered Laserfiche workflow processes.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>Summer Internship</h4>
+                            <p>Agricultural Bank of Egypt (July 2022 – Aug 2022)</p>
+                            <p>
+                                Processed 3,000+ electronic payments, improving accuracy by 20% through error detection.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>Summer Internship</h4>
+                            <p>Banque Misr (Aug 2022 – Sept 2022)</p>
+                            <p>
+                                Completed a comprehensive training program focused on banking operations, including customer service strategies, digital transformation initiatives, and banking facilities.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>Customer Service Representative</h4>
+                            <p>Atheel Contact Center (May 2021 – August 2021)</p>
+                            <p>
+                                Maintained 90%+ customer satisfaction, resolving 300+ customer inquiries daily.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>Summer Internship</h4>
+                            <p>Commercial International Bank (July 2021 – August 2021)</p>
+                            <p>
+                                Completed a virtual internship program at CIB Egypt, focusing on financial inclusion and gaining direct experience in various aspects of banking operations.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="education" class="section education-section">
+                <h2>Education</h2>
+                <div class="card">
+                    <ul>
+                        <li>
+                            <h4>Bachelor’s degree in business information systems (BIS program)</h4>
+                            <p>Helwan University – Faculty of Commerce and Business Administration (2019 – 2023)</p>
+                            <p>
+                                GPA: 3.81/4.00 (Excellent with Honors).  Developed an advanced E-commerce web application, improving system efficiency and user experience (Excellent with Honors).
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="technical-development" class="section">
+                <h2>Technical & Professional Development</h2>
+                <div class="card">
+                    <h4>Software Development & Middleware:</h4>
+                    <p>Full-Stack PHP Developer (Self-Study), SQL Development (Self-Taught, Advanced Query Writing & Optimization), .NET Developer – Route (Ongoing), Full-Stack .NET Developer – DEPI (Ongoing)</p>
+                    <h4>Networking & IT Infrastructure:</h4>
+                    <p>ITIL V4 – Cap Technology, MCSA (Microsoft Certified Solutions Associate) – Udemy, Network Support & Security – Cisco, Networking Basics, Devices & Initial Configuration – Cisco, Operating Systems Fundamentals – Cisco</p>
+                    <h4>Banking & Business Courses:</h4>
+                    <p>The Relationship between Banks & SMEs – EBI, Introduction to Banking – CFI</p>
+                    <h4>Front-End Development:</h4>
+                    <p>Front-end Fundamentals – ITI Mahara Tech</p>
+                </div>
+            </section>
+            <section id="extracurricular" class="section">
+                <h2>Extracurricular Activities</h2>
+                <div class="card">
+                    <ul>
+                        <li>
+                            <h4>Head of Web Development Committee at X Project (May 2023 – July 2023)</h4>
+                            <p>Led a team of developers, increasing productivity by 30% and delivering a functional website.</p>
+                        </li>
+                        <li>
+                            <h4>Web Development Member at Peer Groups (March 2021 – July 2021)</h4>
+                            <p>Contributed to five interactive websites for student events and learned team collaboration.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="additional-info" class="section">
+                <h2>Additional Information</h2>
+                <div class="card">
+                    <p>Military Status: Exempted. References & Certifications Available Upon Request.</p>
+                </div>
+            </section>
+            <section id="contact" class="section">
+                <h2>Contact Me</h2>
+                <div class="card">
+                    <p>
+                        Feel free to reach out to me via email at <a href="mailto:youssefebrahimhosni@outlook.com">Email</a>  or connect with me on LinkedIn at <a href="https://www.linkedin.com/in/youssef-ebrahim/">LinkedIn</a> .
+                    </p>
+                    <button class="btn-primary">Download CV</button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Youssef Ibrahim. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
